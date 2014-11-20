@@ -1,4 +1,4 @@
-CHRUST_VERSION="0.0.1"
+CHRUST_VERSION="1.0.0"
 RUSTS=()
 
 for dir in "$PREFIX/opt/rusts" "$HOME/.rusts"; do

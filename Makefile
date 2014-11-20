@@ -1,5 +1,5 @@
 NAME=chrust
-VERSION=0.0.1
+VERSION=1.0.0
 AUTHOR=franckverrot
 URL=https://github.com/$(AUTHOR)/$(NAME)
 
