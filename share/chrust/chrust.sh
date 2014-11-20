@@ -2,7 +2,7 @@ CHRUST_VERSION="0.0.1"
 RUSTS=()
 
 for dir in "$PREFIX/opt/rusts" "$HOME/.rusts"; do
-	[[ -d "$dir" && -n "$(ls -A "$dir")" ]] && rusts+=("$dir"/*)
+	[[ -d "$dir" && -n "$(ls -A "$dir")" ]] && RUSTS+=("$dir"/*)
 done
 unset dir
 
@@ -41,7 +41,7 @@ function chrust()
 			;;
 		"")
 			local dir star
-			for dir in "${rusts[@]}"; do
+			for dir in "${RUSTS[@]}"; do
 				dir="${dir%%/}"
 				if [[ "$dir" == "$RUST_ROOT" ]]; then star="*"
 				else                                  star=" "
@@ -53,7 +53,7 @@ function chrust()
 		none) chrust_reset ;;
 		*)
 			local dir match
-			for dir in "${rusts[@]}"; do
+			for dir in "${RUSTS[@]}"; do
 				dir="${dir%%/}"
 				case "${dir##*/}" in
 					"$1")	match="$dir" && break ;;
