@@ -28,6 +28,7 @@ function chrust_use()
 
 	export RUST_ROOT="$1"
 	export PATH="$RUST_ROOT/bin:$PATH"
+	export DYLD_LIBRARY_PATH="$RUST_ROOT/lib:$DYLD_LIBRARY_PATH"
 }
 
 function chrust()
